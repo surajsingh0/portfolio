@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+}
+
+header {
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    position: fixed;
+    top: 0.2rem;
+    left: 0.4rem;
+    z-index: 10;
+    margin: 0px;
+    padding: 0px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header ul li {
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid #00ff00;
+    padding: 0.5rem 1rem;
+    color: #00ff00;
+    transition: all 0.3s ease;
+}
+
+header ul li.active {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+header ul li:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+main h1 {
+    text-shadow: 1px 1px 2px #00ff00;
+}
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.projects-container .project-card {
+    border: 1px solid #00ff00;
+    /* border: 1px solid rgba(0, 255, 0, 0.5); */
+    padding: 1rem;
+    width: 25rem;
+    background-color: rgba(0, 255, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-details .desc {
+    height: 10rem;
+    overflow: auto;
+}
+
+.project-details img {
+    width: 100%;
+}
+
+.project-details a img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(1) sepia(1) saturate(100) hue-rotate(50deg);
+}
+
+.project-details .project-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.projects-container .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#aboutMeModal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    background-color: black;
+    box-shadow: 0.5rem 0.5rem 0 rgba(0, 255, 0, 0.5);
+    padding: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    max-width: 90%; /* Optional: Limit the modal width */
+    max-height: 90%; /* Optional: Limit the modal height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 10;
+    overflow: auto;
+}
+
+#aboutMeModal.hidden {
+    display: none;
+}
+
+/* Backdrop styling */
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Semi-transparent black background */
+    backdrop-filter: blur(5px); /* Blurs the content behind */
+    z-index: 9; /* Ensure it is behind the modal but above the main content */
+}
+
+#backdrop.hidden {
+    display: none;
+}
+
+.tech-stack {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Adds spacing between items */
+}
+
+.tech-stack span {
+    background-color: rgba(0, 255, 0, 0.2); /* Subtle green background */
+    color: #00ff00; /* Green text color */
+    padding: 0.2rem 0.4rem; /* Less padding to reduce clutter */
+    border-radius: 0.3rem; /* Slightly rounded corners for a cleaner look */
+    font-size: 0.8rem; /* Smaller font size to fit better */
+    margin: 0.2rem; /* Reduced margin for a tighter layout */
+}
+
+a {
+    color: #00ff00;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    scale: 1.1;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00ff00;
+}
