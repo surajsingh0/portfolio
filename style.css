@@ -149,6 +149,20 @@ main h1 {
     display: none;
 }
 
+#aboutMeModal #closeBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #00ff00;
+    transition: all 0.3s ease;
+}
+
+#aboutMeModal #closeBtn:hover {
+    transform: scale(1.2);
+}
+
 /* Backdrop styling */
 #backdrop {
     position: fixed;
@@ -202,4 +216,28 @@ a:hover {
 
 ::-webkit-scrollbar-thumb {
     background-color: #00ff00;
+}
+
+@media (max-width: 600px) {
+    .projects-container .project-card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .projects-container .project-card {
+        width: 32rem;
+    }
+    .project-details .desc {
+        height: 12rem;
+        font-size: 1.2rem;
+    }
+    #aboutMeModal {
+        font-size: 1.2rem;
+        padding: 3rem;
+    }
+    header ul li {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
 }

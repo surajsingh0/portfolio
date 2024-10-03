@@ -2,6 +2,7 @@ const projectsContainer = document.querySelector("#projectsContainer");
 const aboutMeBtn = document.querySelector("#aboutMeBtn");
 const aboutMeModal = document.querySelector("#aboutMeModal");
 const backdrop = document.querySelector("#backdrop");
+const aboutMeCloseBtn = document.querySelector("#closeBtn");
 
 const myProjects = [
     {
@@ -131,19 +132,22 @@ const toggleAboutMe = () => {
     aboutMeModal.classList.toggle("hidden");
 };
 
-aboutMeBtn.addEventListener("click", () => {
+const toggleAboutMeModal = () => {
     toggleAboutMe();
     toggleBackdrop();
     if (!aboutMeBtn.classList.contains("active")) {
-        aboutMeBtn.innerText = "X";
+        aboutMeBtn.innerText = "< Projects";
     } else {
         aboutMeBtn.innerText = "About Me";
     }
     aboutMeBtn.classList.toggle("active");
-});
+};
+
+aboutMeBtn.addEventListener("click", toggleAboutMeModal);
+aboutMeCloseBtn.addEventListener("click", toggleAboutMeModal);
 
 const initialState = () => {
-    aboutMeBtn.innerText = "X";
+    aboutMeBtn.innerText = "< Projects";
     aboutMeBtn.classList.add("active");
     aboutMeModal.classList.remove("hidden");
     backdrop.classList.remove("hidden");
