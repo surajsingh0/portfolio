@@ -7,6 +7,18 @@ const aboutMeCloseBtn = document.querySelector("#closeBtn");
 const myProjects = [
     {
         id: 1,
+        name: "GHP Tracker",
+        description:
+            "GHP (Goal Habit Progression) is an intuitive platform designed to help users track their habits and achieve their goals. The application features comprehensive habit tracking, goal progression with customizable milestones, streaks and rewards to boost motivation, and a mobile app for on-the-go access. It offers a range of plans from a free basic option to premium Pro and Team packages, catering to individual users and collaborative teams alike.",
+        techStack: ["JavaScript", "Flask"],
+        links: {
+            demo: "http://ghptrack.com/",
+            repository: "https://github.com/surajsingh0/ghp-tracker",
+        },
+        image: "ghp.webp",
+    },
+    {
+        id: 2,
         name: "SwapLocal",
         description:
             "SwapLocal is a community platform that simplifies local item exchanges, promoting sustainability and connection. Users can list items, set exchange ranges, and swap with neighbors, reducing waste and saving money. The platform highlights environmental and economic benefits, fostering a circular economy and building stronger local ties.",
@@ -16,18 +28,6 @@ const myProjects = [
             repository: "https://github.com/surajsingh0/swaplocal-client",
         },
         image: "swaplocal.webp",
-    },
-    {
-        id: 2,
-        name: "GHP Tracker",
-        description:
-            "GHP (Goal Habit Progression) is an intuitive platform designed to help users track their habits and achieve their goals. The application features comprehensive habit tracking, goal progression with customizable milestones, streaks and rewards to boost motivation, and a mobile app for on-the-go access. It offers a range of plans from a free basic option to premium Pro and Team packages, catering to individual users and collaborative teams alike.",
-        techStack: ["JavaScript", "Flask"],
-        links: {
-            demo: "coming-soon.html",
-            repository: "https://github.com/surajsingh0/ghp-tracker",
-        },
-        image: "ghp.webp",
     },
     {
         id: 3,
