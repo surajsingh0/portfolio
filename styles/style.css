@@ -4,6 +4,12 @@
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
+:root {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -283,6 +289,24 @@ a:hover {
         margin-top: 0.5rem;
     }
 }
+
+/* @media (min-width: 936px) {
+    .projects-container {
+        display: block;
+        column-count: 2;
+        column-gap: 2rem;
+        align-items: normal;
+        justify-content: normal;
+        flex-wrap: normal;
+    }
+
+    .projects-container .project-card {
+        break-inside: avoid;
+        margin-bottom: 2rem;
+        width: auto;
+        box-sizing: border-box;
+    }
+} */
 
 .carousel-container {
     position: relative;
