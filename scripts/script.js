@@ -7,6 +7,7 @@ const aboutMeBtn = document.querySelector("#aboutMeBtn");
 const aboutMeModal = document.querySelector("#aboutMeModal");
 const backdrop = document.querySelector("#backdrop");
 const aboutMeCloseBtn = document.querySelector("#closeBtn");
+const projectsBtn = document.querySelector("#projectsBtn");
 
 const myProjects = [
     {
@@ -333,6 +334,7 @@ const toggleAboutMeModal = () => {
 
 aboutMeBtn.addEventListener("click", toggleAboutMeModal);
 aboutMeCloseBtn.addEventListener("click", toggleAboutMeModal);
+projectsBtn.addEventListener("click", toggleAboutMeModal);
 
 const initialState = () => {
     aboutMeBtn.innerText = "< Projects";
